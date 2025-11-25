@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 title: "EDLD 651 Final Project"
+=======
+title: "Seperate working file"
+>>>>>>> origin/main
 author: "Sara Kiros, Ohnmar Khine Min, Chen Su"
 format: 
   html:
@@ -46,6 +50,7 @@ wave5_raw <- pwave5 |>
 ```
 
 
+<<<<<<< HEAD
 ### 1. Cleaning Employment variables
 ```{r}
 #| label: clean-employment
@@ -91,6 +96,18 @@ wave5_clean <- wave5_clean |>
 
 #Health insurance status (h5id9 & h5id10a,b,c,d)
 wave5_clean <- wave5_raw %>%
+=======
+### 1. 
+**Health Insurance Status**
+```{r}
+#Factoring 
+
+
+library(dplyr)
+
+# Factor: Health insurance status (Q9)
+wave5_raw <- wave5_raw %>%
+>>>>>>> origin/main
   mutate(
     h5id9 = factor(
       h5id9,
@@ -114,13 +131,18 @@ wave5_clean <- wave5_raw %>%
   )
 
 # Factor: Q10 reasons (0 = no, 1 = yes, 97 = legitimate skip)
+<<<<<<< HEAD
 wave5_clean <- wave5_raw %>%
+=======
+wave5_raw <- wave5_raw %>%
+>>>>>>> origin/main
   mutate(across(
     c(h5id10a, h5id10b, h5id10c, h5id10d),
     ~ factor(.,
              levels = c(0, 1, 97),
              labels = c("no", "yes", "legitimate skip"))
   ))
+<<<<<<< HEAD
 ```
 
 
@@ -130,6 +152,19 @@ wave5_clean <- wave5_raw %>%
 #Household Income in the last calendar year (h5ec2)
 
 wave5_clean <- wave5_raw %>%
+=======
+
+
+
+
+```
+
+
+
+```{r}
+
+wave5_raw <- wave5_raw %>%
+>>>>>>> origin/main
   mutate(
     h5ec2 = factor(
       h5ec2,
@@ -155,10 +190,18 @@ wave5_clean <- wave5_raw %>%
 
 ```
 
+<<<<<<< HEAD
 
 ```{r}
 
 
+=======
+#Renaming Columns 
+```{r}
+
+
+
+>>>>>>> origin/main
 wave5_clean <- wave5_raw %>%
   rename(
     insurance_status = h5id9,
@@ -170,6 +213,7 @@ wave5_clean <- wave5_raw %>%
   )
 
 #colnames(wave5_raw)
+<<<<<<< HEAD
 ```
 
 **Data Exploratory visualization for Household Income Count**
@@ -199,9 +243,29 @@ wave5_clean %>%
   geom_col() +
   labs(title = "Count by Income Level", x = "Household Income Level", y = "Count") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+=======
+
+```
+
+
+
+```{r}
+
+geom_col
+>>>>>>> origin/main
 
 
 ```
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/main

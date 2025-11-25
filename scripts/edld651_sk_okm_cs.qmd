@@ -157,7 +157,12 @@ wave5_clean <- wave5_raw %>%
 
 
 ```{r}
+<<<<<<< HEAD
 #Renaming Column names 
+=======
+
+
+>>>>>>> origin/main
 wave5_clean <- wave5_raw %>%
   rename(
     insurance_status = h5id9,
@@ -172,6 +177,7 @@ wave5_clean <- wave5_raw %>%
 ```
 
 
+<<<<<<< HEAD
 **Data Exploratory visualization for Household Income Count**
 ```{r}
 wave5_clean %>%
@@ -202,6 +208,8 @@ wave5_clean %>%
 
 
 ```
+=======
+>>>>>>> origin/main
 
 
 
